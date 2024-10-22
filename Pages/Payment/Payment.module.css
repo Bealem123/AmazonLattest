@@ -1,0 +1,225 @@
+/* Base Styles for Mobile First */
+.payment {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  justify-content: center;
+}
+
+.payment h1 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.payment_section {
+  border: 1px solid lightgray;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+  justify-content: center;
+}
+
+.payment_title {
+  margin-bottom: 10px;
+}
+
+.payment_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  padding: 10px;
+  background-color: #fff;
+  height: 100%; 
+}
+
+.payment_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  width: 100%; 
+  max-width: 800px; 
+}
+
+.payment_item h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.payment_address,
+.payment_items,
+.payment_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.payment_address p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 4px 0;
+}
+
+.payment_items {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.payment_item {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+} 
+
+.payment_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.payment_details .form {
+  display: flex;
+}
+
+.payment_item img {
+  position: relative;
+  width: 100px; 
+  height: 100px;
+  object-fit: contain; 
+  margin: auto; 
+  justify-content: center; 
+  align-items: center; 
+  padding: auto;
+}
+
+.payment_price {
+  margin-top: 20px;
+}
+
+.payment_button {
+  background-color: #f0c14b;
+  border-radius: 2px;
+  border: 1px solid;
+  color: #111;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment_button:hover {
+  background-color: #ddb347;
+}
+
+.payment_error {
+  color: red;
+  margin-top: 10px;
+}
+
+.payment_price h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.payment_details form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment_details .StripeElement {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.payment_details .StripeElement--focus {
+  border-color: #f0c14b;
+}
+
+/* Media Queries for Larger Screens (Tablet and Up) */
+@media (max-width: 768px) {
+  .payment h1 {
+    font-size: 24px;
+  }
+
+  .payment_section {
+    padding: 15px;
+  }
+
+  .payment_item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .payment_item img {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .payment_item h2 {
+    font-size: 16px;
+  }
+
+  .payment_button {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .payment_price h3 {
+    font-size: 18px;
+  }
+}
+
+/* Media Queries for Larger Tablets and Up */
+@media (max-width: 1024px) {
+  .payment h1 {
+    font-size: 26px;
+  }
+
+  .payment_item img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .payment_item h2 {
+    font-size: 17px;
+  }
+
+  .payment_price h3 {
+    font-size: 20px;
+  }
+}
+
+/* Media Queries for Desktops and Larger Screens */
+@media (min-width: 1200px) {
+  .payment {
+    padding: 30px;
+  }
+
+  .payment_item img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .payment_item h2 {
+    font-size: 20px;
+  }
+
+  .payment_price h3 {
+    font-size: 24px;
+  }
+}

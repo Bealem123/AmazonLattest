@@ -1,0 +1,143 @@
+/* ProductCard.css */
+
+.productCard {
+  color: black;
+  background-color: #fff;
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  text-decoration: none;
+  position: relative;
+  padding: 10px; 
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  width: 100%; /* Full width on mobile */
+  height: auto; /* Dynamic height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between elements */
+  align-items: center; /* Center elements horizontally */
+  margin: 10px auto; /* Center the card itself */
+}
+
+.productImage {
+  width: 80%; /* Keep the image width */
+  height: 100px; /* Reduced height for the image */
+  object-fit: contain; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space below the image */
+  border-radius: 4px;
+}
+
+.productTitle {
+  font-weight: bold;
+  font-size: 14px; /* Adjust title size */
+  margin: 5px 0; /* Adjust margin */
+  text-align: center; /* Center the title */
+}
+
+.productPrice {
+  font-size: 20px; /* Adjust price size */
+  font-weight: bold;
+  margin: 5px 0; /* Adjust margin */
+  text-align: center; /* Center the price */
+}
+
+.button {
+  width: 80%; /* Maintain button width */
+  color: #171111;
+  border: none; 
+  border-radius: 20px;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  padding: 8px 12px; /* Keep button padding */
+  font-size: 12px; /* Adjust button font size */
+  margin-top: 10px; /* Adjust margin */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  cursor: pointer;
+}
+
+.productCard:hover {
+  transform: scale(1.05); 
+}
+
+.productCard:hover .button {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); 
+}
+
+.flexCard {
+  box-shadow: none;
+  display: flex;
+  height: auto;
+  gap: 20px; /* Reduced gap for mobile */
+  width: 100%;
+  margin: 20px; /* Reduced margin for mobile */
+}
+
+.flexCard .button {
+  display: block;
+  position: static;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.flexCard {
+  height: auto; /* Changed to auto for better responsiveness */
+}
+
+.flexCard img {
+  width: 100%; /* Full width on mobile */
+  height: auto; 
+}
+
+.productGrid {
+  max-width: 1200px;
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  padding: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+  margin: 0 auto; 
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .productCard {
+    width: 220px; /* Maintain the width for larger screens */
+  }
+
+  .flexCard {
+    gap: 50px; /* Increased gap for larger screens */
+    margin: 50px; /* Increased margin for larger screens */
+  }
+
+  .flexCard img {
+    flex: 0 0 40%; 
+    max-width: 200px;
+    height: auto; 
+    margin-right: 20px; 
+  }
+
+  .productTitle {
+    font-size: 14px; /* Default for larger screens */
+  }
+
+  .productPrice {
+    font-size: 20px; /* Default for larger screens */
+  }
+}
+
+/* Adjustments for small screens */
+@media (max-width: 767px) {
+  .productTitle {
+    font-size: 12px; 
+  }
+
+  .productPrice {
+    font-size: 10px; 
+  }
+}

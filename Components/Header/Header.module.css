@@ -1,0 +1,237 @@
+.fixed {
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: fit-content;
+  margin-top: 0;
+  padding: 0;
+  position: sticky;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  background-color: #131921;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header__logo {
+  width: 80px; /* Mobile size */
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.header__location {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+}
+
+.deliver {
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.header__search {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header__searchContainer {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.header__searchDropdown {
+  padding: 10px;
+  border: none;
+  background-color: #f3f3f3;
+}
+
+.header__searchInput {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+.header__searchIcon {
+  padding: 10px;
+  background-color: #febd69;
+  border: none;
+}
+
+.header__languageDropdown {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.language {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.language-select {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__option {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+.header__optionLineOne {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.header__optionLineTwo {
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 10px;
+  color: white;
+}
+
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.header__basketCount {
+  margin-left: 5px;
+  font-weight: bold;
+  color: #febd69;
+}
+
+/* New class for Sign In padding */
+.header__optionSignIn {
+  padding-left: 50px; /* Adjust this value as needed */
+}
+
+/* Override just for Returns & Orders */
+.header__nav .header__option:nth-child(2) {
+  flex-direction: column; /* Keep this section in a column layout */
+}
+
+@media screen and (min-width: 480px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .header__option {
+    flex-direction: row;
+    margin: 0 10px;
+    align-items: center;
+  }
+
+  /* Maintain Returns & Orders in column layout */
+  .header__nav .header__option:nth-child(2) {
+    flex-direction: column;
+  }
+
+  .header__logo {
+    width: 100px;
+  }
+
+  .header__search {
+    flex-direction: row;
+    max-width: 100%;
+  }
+
+  .header__searchInput {
+    padding: 10px;
+  }
+
+  .header__nav {
+    justify-content: flex-end;
+  }
+
+  .header__option {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    width: 120px;
+  }
+
+  .header__option {
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+  }
+
+  /* Ensure Returns & Orders remains in column on laptop screens */
+  .header__nav .header__option:nth-child(2) {
+    flex-direction: column;
+  }
+}
+
+/* CSS styles for small screens */
+@media screen and (max-width: 480px) {
+  .header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .header__search {
+    width: 100%; /* Full width for the search bar */
+    margin-bottom: 10px; /* Space below the search bar */
+  }
+
+  .header__searchContainer {
+    width: 100%; /* Ensure the search container uses full width */
+  }
+
+  .header__searchIcon {
+    display: block; /* Ensure the search icon is displayed */
+  }
+
+  .header__languageDropdown {
+    margin-bottom: 10px; /* Space below the language dropdown */
+  }
+
+  .header__nav {
+    flex-direction: row; /* Align nav items in a row */
+    justify-content: space-between; /* Space items evenly */
+    width: 100%; /* Full width */
+  }
+
+  .header__optionBasket {
+    margin-left: 10px; /* Space before the cart icon */
+  }
+
+  .header__option {
+    flex-direction: row; /* Keep options in a row */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width */
+    justify-content: space-between; /* Space out items */
+  }
+}

@@ -1,0 +1,8 @@
+export const Type = {
+  ADD_TO_BASKET: "ADD_TO_BASKET",
+  REMOVE_FROM_BASKET: "REMOVE_FROM_BASKET",
+  INCREMENT: "INCREMENT",
+  DECREMENT: "DECREMENT",
+  SET_USER: "SET_USER",
+  EMPTY_BASKET: "EMPTY_BASKET", // New action for emptying the basket
+};

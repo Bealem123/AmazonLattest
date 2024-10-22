@@ -1,0 +1,81 @@
+.categoryContainer { 
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 20px; 
+  padding: 20px; 
+  position: relative; /* Ensure that z-index works */
+  z-index: 1; /* Base z-index */
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 3px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  flex: 1 0 100%; /* Full width on small screens */
+  max-width: 350px; /* Optional: set a max width */
+  text-align: center;
+  height: 350px;
+  position: relative; /* Add position to allow z-index */
+}
+
+.category:hover {
+  transform: scale(1.05); 
+}
+
+.categoryCard__image {
+  width: 100%;
+  max-width: 150px; 
+  max-height: 250px;
+  border-radius: 4px;
+  padding: 0px 10px;
+  object-fit: contain;
+}
+
+.categoryCard__title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.categoryCard__name {
+  font-size: 14px;
+  color: #007185; 
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Media queries for larger screens */
+@media (min-width: 481px) {
+  .category {
+    flex: 0 1 calc(50% - 20px); /* 2 items per row on medium screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .category {
+    flex: 0 1 calc(33.33% - 20px); /* 3 items per row on larger screens */
+    margin-top: -10%;
+  }
+  
+  .categoryContainer {
+    z-index: 2; /* Set z-index higher for laptop size */
+  }
+}
+
+@media (min-width: 1025px) {
+  .category {
+    flex: 0 1 calc(25% - 20px); /* 4 items per row on extra-large screens */
+  }
+  
+  .categoryContainer {
+    z-index: 3; /* Further increase z-index for larger screens */
+  }
+}

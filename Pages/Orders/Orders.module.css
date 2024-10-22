@@ -1,0 +1,95 @@
+/* General Styles for Mobile First */
+.container {
+  padding: 20px;
+  background-color: var(--shade);
+}
+
+.orders__container {
+  max-width: 100%; /* Full width on mobile */
+  margin: 0 auto;
+  background-color: white;
+  padding: 15px; /* Adjust padding for smaller screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 1.5rem; /* Smaller font size for mobile */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.order {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on mobile */
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--shade);
+  padding: 10px 0;
+}
+
+.order:last-child {
+  border-bottom: none;
+}
+
+.order__details {
+  flex: 1;
+  margin-bottom: 10px; /* Add spacing between items */
+}
+
+.order__title {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.order__price {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.order__date {
+  font-size: 0.9rem;
+  color: var(--shade);
+}
+
+/* Media Queries for Larger Screens (Tablet and Up) */
+@media (min-width: 768px) {
+  .orders__container {
+    max-width: 700px; /* Adjust max width for tablets */
+    padding: 20px;
+  }
+
+  .order {
+    flex-direction: row; /* Side by side for tablets */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .order__details {
+    margin-bottom: 0; /* Remove margin for tablet and up */
+  }
+
+  h2 {
+    font-size: 1.8rem; /* Slightly larger font for tablets */
+  }
+}
+
+/* Media Queries for Desktop and Larger Screens */
+@media (min-width: 1024px) {
+  .orders__container {
+    max-width: 1200px; /* Adjust for larger screens */
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 2rem; /* Larger font size for desktop */
+  }
+
+  .order {
+    padding: 15px 0; /* Increase spacing between orders */
+  }
+
+  .order__title {
+    font-size: 1.2rem; /* Adjust title font size for larger screens */
+  }
+}

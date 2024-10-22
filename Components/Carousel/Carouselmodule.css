@@ -1,0 +1,33 @@
+.hero__image {
+  position: relative; /* Ensure the image container is relative */
+  width: 100%; /* Adjust as needed */
+  height: auto;
+}
+
+.hero__img::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, black, white); /* Adjust this to fade from black to transparent */
+  pointer-events: none; /* Ensures it doesn't block mouse events */
+}
+
+/* Mobile first styling */
+.productCard {
+  flex: 0 1 100%; /* 1 card per row on very small screens */
+}
+
+@media (min-width: 481px) {
+  .productCard {
+    flex: 0 1 calc(50% - 20px); /* 2 cards per row on small screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .productCard {
+    flex: 0 1 calc(33.33% - 20px); /* 3 cards per row on medium screens */
+  }
+}

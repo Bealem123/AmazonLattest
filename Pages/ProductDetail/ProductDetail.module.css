@@ -1,0 +1,76 @@
+.productDetailContainer {
+  display: flex;
+  flex-direction: column; /* Stack the image and details vertically on smaller screens */
+  gap: 20px;        
+  padding: 20px;
+  max-width: 1200px; 
+  margin: 0px;  
+}
+
+.productImage {
+  max-width: 100%; /* Full width for the image on smaller screens */
+  object-fit: contain; /* Ensure the image fits without distortion */
+  border-radius: 8px;
+}
+
+.productDetails {
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* Stack the details vertically */
+  justify-content: center;
+  text-align: center; /* Center the details on smaller screens */
+}
+
+.productTitle {
+  font-size: 24px; /* Smaller font size for mobile */
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.productDescription {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.productPrice {
+  font-size: 20px; /* Smaller font size for mobile */
+  color: #b12704;
+  font-weight: bold;
+}
+
+/* Loading and error styles */
+.loading, .error {
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 768px) {
+  .productDetailContainer {
+    flex-direction: row; /* Arrange the image and details side by side on larger screens */
+    align-items: flex-start; /* Align items to the top */
+  }
+
+  .productImage {
+    flex: 1 1 40%; /* Make the image take up to 40% of the container */
+    max-width: 400px; /* Limit the image width */
+  }
+
+  .productDetails {
+    flex: 1 1 55%; /* Make the details take up 55% of the container */
+    text-align: left; /* Left-align the details on larger screens */
+  }
+
+  .productTitle {
+    font-size: 28px; /* Larger font size for desktop */
+  }
+
+  .productPrice {
+    font-size: 24px; /* Larger font size for desktop */
+  }
+}
